@@ -11,6 +11,8 @@
             this.callbacks[port] = callback;
             var uri=Util.getUri(obj,method,params,port);
             console.log(uri);
+            /*执行Android中WebChromeClient的onJsPrompt回调函数*/
+            /*message:JSBridge://bridge:530302481/showToast?{"msg":"Hello JSBridge"}*/
             window.prompt(uri, "");
         },
         onFinish: function (port, jsonObj){

@@ -22,7 +22,8 @@
     <li>
         <div>
             <!--bridge和Native规定的类名协议 及 bridge代表BridgeImpl.class-->
-            <!--调用Android方法-->
+            <!--1.调用JSbridge中的call方法，window.prompt(uri, "")会回调到Android的onPrompt方法中;-->
+            <!--2.JS中的call方法包含类名（bridge）、方法名（showToast）、方法所需的参数(showToast方法形参中包含的回调信息);-->
             <button onclick="JSBridge.call('bridge','showToast',{'msg':'Hello JSBridge'},function(res){alert(JSON.stringify(res))})">
                 测试showToast
             </button>

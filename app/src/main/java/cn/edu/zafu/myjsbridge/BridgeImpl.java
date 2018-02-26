@@ -24,6 +24,7 @@ public class BridgeImpl implements IBridge {
         if (null != callback) {
             try {
                 JSONObject object = new JSONObject();
+                object.put("msg", message);
                 object.put("key", "value");
                 object.put("key1", "value1");
                 callback.apply(getJSONObject(0, "ok", object));

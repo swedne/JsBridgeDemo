@@ -65,6 +65,8 @@ public class JSBridge {
         }
 
 
+        //在MainActivity中的JSBridge.register("bridge", BridgeImpl.class);
+        //将bridge对应为BridgeImpl这个类
         if (exposedMethods.containsKey(className)) {
             HashMap<String, Method> methodHashMap = exposedMethods.get(className);
             if (methodHashMap != null && methodHashMap.size() != 0 && methodHashMap.containsKey(methodName)) {
